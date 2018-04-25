@@ -21,8 +21,6 @@ class SignInSignUpViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //
-
     }
     
     @IBAction func enterTapped(_ sender: Any) {

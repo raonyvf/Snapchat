@@ -22,6 +22,7 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
     
     
@@ -35,6 +36,10 @@ class SignUpViewController: UIViewController {
                     print("There is a error")
                 } else {
                     print("Usuário criado com sucesso")
+                    
+                   let users =  Database.database().reference().child("users")
+                    users.child(user!.uid).child("email").setValue(user!.email)
+                    
                     self.performSegue(withIdentifier: "goBackSegue", sender: nil)
                 }
             }
